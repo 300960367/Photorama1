@@ -11,6 +11,9 @@
 import UIKit
 
 class PhotosViewController: UIViewController {
+    @IBOutlet var imageView: UIImageView!
+    var store: PhotoStore!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,16 +32,15 @@ class PhotosViewController: UIViewController {
         }
     }
 
-    @IBOutlet var imageView: UIImageView!
-    var store: PhotoStore!
-    
     func updateImageView(for photo: Photo) {
-        store.fetchImage(for: photo) {
+        self.store.fetchImage(for: photo) {
             (imageResult) -> Void in
             
             switch imageResult {
             case let .success(image):
-                self.imageView.image = image
+                OperationQueue.main.addOperation {
+                    self.imageView.image = image
+                }
             case let .failure(error):
                 print("Error downloading image: \(error)")
             }
