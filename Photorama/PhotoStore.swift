@@ -9,6 +9,11 @@
 
 import Foundation
 
+enum PhotoResult{
+    case success([Photo])
+    case failure([Error])
+}
+
 class PhotoStore {
     
     private let session: URLSession = {
@@ -24,10 +29,16 @@ class PhotoStore {
             (data, response, error) -> Void in
             
             if let jsonData = data {
-                if let jsonString = String(data: jsonData,
-                                           encoding: .utf8) {
-                    print(jsonString)
-                }
+                do {
+                    let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
+                    print(jsonObject)
+                } catch let error {
+                    print("Error creating JSON object: \(error)")
+                } // do
+//                if let jsonString = String(data: jsonData,
+//                                           encoding: .utf8) {
+//                    print(jsonString)
+//                }
             } else if let requestError = error {
                 print("Error fetching interesting photos: \(requestError)")
             } else {
