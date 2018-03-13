@@ -14,6 +14,7 @@
 		BFFC83AE205742A100455C53 /* PhotoramaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC83AD205742A100455C53 /* PhotoramaTests.swift */; };
 		BFFC83B9205742A100455C53 /* PhotoramaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC83B8205742A100455C53 /* PhotoramaUITests.swift */; };
 		BFFC83C7205743CF00455C53 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC83C6205743CF00455C53 /* PhotosViewController.swift */; };
+		BFFC83C9205749AF00455C53 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC83C8205749AF00455C53 /* FlickrAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BFFC83B8205742A100455C53 /* PhotoramaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoramaUITests.swift; sourceTree = "<group>"; };
 		BFFC83BA205742A100455C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFFC83C6205743CF00455C53 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		BFFC83C8205749AF00455C53 /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				BFFC8398205742A100455C53 /* AppDelegate.swift */,
 				BFFC83C6205743CF00455C53 /* PhotosViewController.swift */,
+				BFFC83C8205749AF00455C53 /* FlickrAPI.swift */,
 				BFFC839C205742A100455C53 /* Main.storyboard */,
 				BFFC839F205742A100455C53 /* Assets.xcassets */,
 				BFFC83A1205742A100455C53 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFC83C9205749AF00455C53 /* FlickrAPI.swift in Sources */,
 				BFFC83C7205743CF00455C53 /* PhotosViewController.swift in Sources */,
 				BFFC8399205742A100455C53 /* AppDelegate.swift in Sources */,
 			);
